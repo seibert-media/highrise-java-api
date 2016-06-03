@@ -10,20 +10,20 @@ import javax.xml.bind.annotation.XmlRootElement;
  * @author thiagofa
  *
  */
-@XmlRootElement(name="errors")
+@XmlRootElement(name = "errors")
 public class Errors implements Serializable {
 
-	private static final long serialVersionUID = 1L;
-	
-	private String error;
+  private static final long serialVersionUID = 1L;
 
-	@XmlElement
-	public String getError() {
-		return error;
-	}
+  private String error;
+
+  @XmlElement
+  public String getError() {
+    return error;
+  }
 
   public void setError(final String error) {
-		this.error = error;
-	}
-	
+    this.error = error;
+  }
+
 }

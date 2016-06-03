@@ -7,25 +7,25 @@ package com.algaworks.highrisehq;
  */
 public class HighriseException extends RuntimeException {
 
-	private static final long serialVersionUID = 1L;
+  private static final long serialVersionUID = 1L;
 
-	private int statusCode;
-	
+  private int statusCode;
+
   public HighriseException(final int statusCode, final String message) {
-		super(message);
-		this.statusCode = statusCode;
-	}
+    super(message);
+    this.statusCode = statusCode;
+  }
 
   public HighriseException(final String message, final Throwable cause) {
-		super(message, cause);
-	}
-	
-	public int getStatusCode() {
-		return statusCode;
-	}
+    super(message, cause);
+  }
+
+  public int getStatusCode() {
+    return statusCode;
+  }
 
   public void setStatusCode(final int statusCode) {
-		this.statusCode = statusCode;
-	}
-	
+    this.statusCode = statusCode;
+  }
+
 }

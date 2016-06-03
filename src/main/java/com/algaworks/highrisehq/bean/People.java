@@ -11,22 +11,22 @@ import javax.xml.bind.annotation.XmlRootElement;
  * @author thiagofa
  *
  */
-@XmlRootElement(name="people")
-public class People implements Serializable, ListWrapper<Person>{
+@XmlRootElement(name = "people")
+public class People implements Serializable, ListWrapper<Person> {
 
-	private static final long serialVersionUID = 1L;
-	
-	private List<Person> people;
-	
+  private static final long serialVersionUID = 1L;
+
+  private List<Person> people;
+
   @Override
-	@XmlElement(name="person")
-	public List<Person> getObjects() {
-		return people;
-	}
+  @XmlElement(name = "person")
+  public List<Person> getObjects() {
+    return people;
+  }
 
   @Override
   public void setObjects(final List<Person> people) {
-		this.people = people;
-	}
+    this.people = people;
+  }
 
 }

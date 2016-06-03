@@ -18,45 +18,45 @@ import com.algaworks.highrisehq.bean.Task;
 public class HighriseTest {
 
   public static void main(final String[] args) {
-		// if your URL is http://algaworks.highrisehq.com and your token 12345, use:
-		// Highrise highrise = new Highrise("algaworks", "12345");
+    // if your URL is http://algaworks.highrisehq.com and your token 12345, use:
+    // Highrise highrise = new Highrise("algaworks", "12345");
     final Highrise highrise = new Highrise("your_account_name_here", "your_token_here");
-		
-		// creates a person
-		Person person = new Person();
-		person.setFirstName("John");
-		person.setLastName("Doe");
-		person.setBackground("A good person.");
-		person.getContactData().addEmailAddress(new EmailAddress("john.doe.123@gmail.com", "Home"));
-		person.getContactData().addEmailAddress(new EmailAddress("johnjohn@hotmail.com", "Home"));
-		person.getContactData().addPhoneNumber(new PhoneNumber("55 34 1234-5678", "Work"));
-		person = highrise.getPeopleManager().create(person);
-                
-		// creates a note for John Doe
-    final Note note = new Note();
-		note.setBody("I told him a joke.");
-		note.setSubjectId(person.getId());
-		note.setSubjectType(Highrise.SubjectType.PARTY);
-		highrise.getNoteManager().create(note);
-		
-		// creates a task for John Doe
-    final Task task = new Task();
-		task.setBody("Call him and tell another joke");
-		task.setOwnerId(0L); // the owner id (check it in Highrise)
-		task.setCategoryId(0L); // the category id (check it in Highrise)
-		task.setPublic(true);
-		task.setSubjectType(Highrise.SubjectType.PARTY);
-		task.setSubjectId(person.getId());
-		task.setFrame("specific");
-		task.setDueAt(new Date());
-		highrise.getTaskManager().create(task);
 
-		// search for John Doe using his email
+    // creates a person
+    Person person = new Person();
+    person.setFirstName("John");
+    person.setLastName("Doe");
+    person.setBackground("A good person.");
+    person.getContactData().addEmailAddress(new EmailAddress("john.doe.123@gmail.com", "Home"));
+    person.getContactData().addEmailAddress(new EmailAddress("johnjohn@hotmail.com", "Home"));
+    person.getContactData().addPhoneNumber(new PhoneNumber("55 34 1234-5678", "Work"));
+    person = highrise.getPeopleManager().create(person);
+
+    // creates a note for John Doe
+    final Note note = new Note();
+    note.setBody("I told him a joke.");
+    note.setSubjectId(person.getId());
+    note.setSubjectType(Highrise.SubjectType.PARTY);
+    highrise.getNoteManager().create(note);
+
+    // creates a task for John Doe
+    final Task task = new Task();
+    task.setBody("Call him and tell another joke");
+    task.setOwnerId(0L); // the owner id (check it in Highrise)
+    task.setCategoryId(0L); // the category id (check it in Highrise)
+    task.setPublic(true);
+    task.setSubjectType(Highrise.SubjectType.PARTY);
+    task.setSubjectId(person.getId());
+    task.setFrame("specific");
+    task.setDueAt(new Date());
+    highrise.getTaskManager().create(task);
+
+    // search for John Doe using his email
     final List<Person> people = highrise.getPeopleManager().searchByCriteria(null, null, null, null, null, "john.doe.123@gmail.com");
-		
+
     for (final Person p : people) {
-			System.out.println(p.getFirstName());
-		}
-	}
-	
+      System.out.println(p.getFirstName());
+    }
+  }
+
 }
