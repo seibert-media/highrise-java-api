@@ -19,12 +19,12 @@ public class SubjectData implements Serializable {
 
     public SubjectData() {}
     
-    public SubjectData(String fieldId, String value) {
+  public SubjectData(final String fieldId, final String value) {
         this.fieldId = fieldId;
         this.value = value;
     }
     
-    public SubjectData(String fieldId, String value, String label) {
+  public SubjectData(final String fieldId, final String value, final String label) {
         this(fieldId, value);
         this.label = label;
     }
@@ -34,7 +34,7 @@ public class SubjectData implements Serializable {
         return id;
     }
 
-    public void setId(Long id) {
+  public void setId(final Long id) {
         this.id = id;
     }
     
@@ -43,7 +43,7 @@ public class SubjectData implements Serializable {
         return value;
     }
 
-    public void setValue(String value) {
+  public void setValue(final String value) {
         this.value = value;
     }
 
@@ -52,7 +52,7 @@ public class SubjectData implements Serializable {
         return fieldId;
     }
 
-    public void setFieldId(String name) {
+  public void setFieldId(final String name) {
         this.fieldId = name;
     }
 
@@ -61,12 +61,12 @@ public class SubjectData implements Serializable {
         return label;
     }
 
-    public void setLabel(String label) {
+  public void setLabel(final String label) {
         this.label = label;
     }
 
     @Override
-    public boolean equals(Object obj) {
+  public boolean equals(final Object obj) {
         if (obj == null) {
             return false;
         }

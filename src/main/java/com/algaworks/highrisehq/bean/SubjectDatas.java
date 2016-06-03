@@ -20,7 +20,7 @@ public class SubjectDatas {
         return datas;
     }
 
-    public void setDatas(List<SubjectData> datas) {
+  public void setDatas(final List<SubjectData> datas) {
         this.datas = datas;
     }
 
@@ -29,18 +29,17 @@ public class SubjectDatas {
         return type;
     }
 
-    public void setType(String type) {
+  public void setType(final String type) {
         this.type = type;
     }
 
-    public void removeData(SubjectData subjectData) {
-        for (Iterator<SubjectData> it = datas.iterator(); it.hasNext();) {
-            SubjectData sd = it.next();
-            if (sd.getFieldId().equals(subjectData.getFieldId())){
-                sd.setId(-sd.getId());
-                sd.setValue("");
-            }
-        }
+  public void removeData(final SubjectData subjectData) {
+    for (final SubjectData sd : datas) {
+      if (sd.getFieldId().equals(subjectData.getFieldId())) {
+        sd.setId(-sd.getId());
+        sd.setValue("");
+      }
+    }
     }
     
 }

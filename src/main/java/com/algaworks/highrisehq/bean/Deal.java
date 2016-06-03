@@ -43,7 +43,7 @@ public class Deal implements Serializable {
         return accountId;
     }
 
-    public void setAccountId(String accountId) {
+  public void setAccountId(final String accountId) {
         this.accountId = accountId;
     }
 
@@ -52,7 +52,7 @@ public class Deal implements Serializable {
         return name;
     }
 
-    public void setName(String name) {
+  public void setName(final String name) {
         this.name = name;
     }
 
@@ -61,7 +61,7 @@ public class Deal implements Serializable {
         return background;
     }
 
-    public void setBackground(String background) {
+  public void setBackground(final String background) {
         this.background = background;
     }
 
@@ -70,7 +70,7 @@ public class Deal implements Serializable {
         return categoryId;
     }
 
-    public void setCategoryId(Long categoryId) {
+  public void setCategoryId(final Long categoryId) {
         this.categoryId = categoryId;
     }
 
@@ -79,7 +79,7 @@ public class Deal implements Serializable {
         return groupId;
     }
 
-    public void setGroupId(Long groupId) {
+  public void setGroupId(final Long groupId) {
         this.groupId = groupId;
     }
 
@@ -88,7 +88,7 @@ public class Deal implements Serializable {
         return id;
     }
 
-    public void setId(Long id) {
+  public void setId(final Long id) {
         this.id = id;
     }
 
@@ -97,7 +97,7 @@ public class Deal implements Serializable {
         return partyId;
     }
 
-    public void setPartyId(Long partyId) {
+  public void setPartyId(final Long partyId) {
         this.partyId = partyId;
     }
 
@@ -106,7 +106,7 @@ public class Deal implements Serializable {
         return status;
     }
 
-    public void setStatus(String status) {
+  public void setStatus(final String status) {
         this.status = status;
     }
 
@@ -115,7 +115,7 @@ public class Deal implements Serializable {
         return createDate;
     }
 
-    public void setCreateDate(Date createDate) {
+  public void setCreateDate(final Date createDate) {
         this.createDate = createDate;
     }
 
@@ -124,7 +124,7 @@ public class Deal implements Serializable {
         return currency;
     }
 
-    public void setCurrency(String currency) {
+  public void setCurrency(final String currency) {
         this.currency = currency;
     }
 
@@ -133,7 +133,7 @@ public class Deal implements Serializable {
         return duration;
     }
 
-    public void setDuration(Integer duration) {
+  public void setDuration(final Integer duration) {
         this.duration = duration;
     }
 
@@ -142,7 +142,7 @@ public class Deal implements Serializable {
         return ownerId;
     }
 
-    public void setOwnerId(Long ownerId) {
+  public void setOwnerId(final Long ownerId) {
         this.ownerId = ownerId;
     }
 
@@ -151,7 +151,7 @@ public class Deal implements Serializable {
         return price;
     }
 
-    public void setPrice(Long price) {
+  public void setPrice(final Long price) {
         this.price = price;
     }
 
@@ -160,7 +160,7 @@ public class Deal implements Serializable {
         return priceType;
     }
 
-    public void setPriceType(String priceType) {
+  public void setPriceType(final String priceType) {
         this.priceType = priceType;
     }
 
@@ -169,7 +169,7 @@ public class Deal implements Serializable {
         return responsiblePartyId;
     }
 
-    public void setResponsiblePartyId(Long responsiblePartyId) {
+  public void setResponsiblePartyId(final Long responsiblePartyId) {
         this.responsiblePartyId = responsiblePartyId;
     }
 
@@ -178,7 +178,7 @@ public class Deal implements Serializable {
         return statusChangeDate;
     }
 
-    public void setStatusChangeDate(Date statusChangeDate) {
+  public void setStatusChangeDate(final Date statusChangeDate) {
         this.statusChangeDate = statusChangeDate;
     }
 
@@ -187,7 +187,7 @@ public class Deal implements Serializable {
         return updateDate;
     }
 
-    public void setUpdateDate(Date updateDate) {
+  public void setUpdateDate(final Date updateDate) {
         this.updateDate = updateDate;
     }
 
@@ -196,7 +196,7 @@ public class Deal implements Serializable {
         return visibleTo;
     }
 
-    public void setVisibleTo(String visibleTo) {
+  public void setVisibleTo(final String visibleTo) {
         this.visibleTo = visibleTo;
     }
 

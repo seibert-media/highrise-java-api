@@ -27,7 +27,7 @@ public class ContactData implements Serializable {
 		return emailAddresses;
 	}
 
-	public void setEmailAddresses(List<EmailAddress> emailAddresses) {
+  public void setEmailAddresses(final List<EmailAddress> emailAddresses) {
 		this.emailAddresses = emailAddresses;
 	}
 
@@ -37,7 +37,7 @@ public class ContactData implements Serializable {
 		return phoneNumbers;
 	}
 
-	public void setPhoneNumbers(List<PhoneNumber> phoneNumbers) {
+  public void setPhoneNumbers(final List<PhoneNumber> phoneNumbers) {
 		this.phoneNumbers = phoneNumbers;
 	}
 
@@ -47,7 +47,7 @@ public class ContactData implements Serializable {
             return webAddresses;
         }
 
-        public void setWebAddresses(List<WebAddress> webAddresses) {
+  public void setWebAddresses(final List<WebAddress> webAddresses) {
             this.webAddresses = webAddresses;
         }
 
@@ -57,26 +57,26 @@ public class ContactData implements Serializable {
             return addresses;
         }
 
-        public void setAddresses(List<Address> addresses) {
+  public void setAddresses(final List<Address> addresses) {
             this.addresses = addresses;
         }
 
-	public void addPhoneNumber(PhoneNumber phoneNumber) {
+  public void addPhoneNumber(final PhoneNumber phoneNumber) {
             if (phoneNumber.getNumber() != null)
 		this.phoneNumbers.add(phoneNumber);
 	}
 	
-	public void addEmailAddress(EmailAddress emailAddress) {
+  public void addEmailAddress(final EmailAddress emailAddress) {
             if (emailAddress.getAddress() != null)
 		this.emailAddresses.add(emailAddress);
 	}
         
-        public void addWebAddress(WebAddress webAddress) {
+  public void addWebAddress(final WebAddress webAddress) {
             if (webAddress.getUrl() != null)
                 this.webAddresses.add(webAddress);
         }
 	
-        public void addAddress(Address address) {
+  public void addAddress(final Address address) {
             if (address.getStreet() != null)
                 this.addresses.add(address);
         }

@@ -18,7 +18,7 @@ public class TagResponse implements Serializable {
     public TagResponse() {
     }
 
-    public TagResponse(String id, String name) {
+  public TagResponse(final String id, final String name) {
         this.id = id;
         this.name = name;
     }
@@ -27,7 +27,7 @@ public class TagResponse implements Serializable {
         return id;
     }
 
-    public void setId(String id) {
+  public void setId(final String id) {
         this.id = id;
     }
 
@@ -35,7 +35,7 @@ public class TagResponse implements Serializable {
         return name;
     }
 
-    public void setName(String name) {
+  public void setName(final String name) {
         this.name = name;
     }
     

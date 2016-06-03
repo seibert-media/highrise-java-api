@@ -17,10 +17,10 @@ import com.algaworks.highrisehq.bean.Task;
  */
 public class HighriseTest {
 
-	public static void main(String[] args) {
+  public static void main(final String[] args) {
 		// if your URL is http://algaworks.highrisehq.com and your token 12345, use:
 		// Highrise highrise = new Highrise("algaworks", "12345");
-		Highrise highrise = new Highrise("your_account_name_here", "your_token_here");
+    final Highrise highrise = new Highrise("your_account_name_here", "your_token_here");
 		
 		// creates a person
 		Person person = new Person();
@@ -33,14 +33,14 @@ public class HighriseTest {
 		person = highrise.getPeopleManager().create(person);
                 
 		// creates a note for John Doe
-		Note note = new Note();
+    final Note note = new Note();
 		note.setBody("I told him a joke.");
 		note.setSubjectId(person.getId());
 		note.setSubjectType(Highrise.SubjectType.PARTY);
 		highrise.getNoteManager().create(note);
 		
 		// creates a task for John Doe
-		Task task = new Task();
+    final Task task = new Task();
 		task.setBody("Call him and tell another joke");
 		task.setOwnerId(0L); // the owner id (check it in Highrise)
 		task.setCategoryId(0L); // the category id (check it in Highrise)
@@ -52,9 +52,9 @@ public class HighriseTest {
 		highrise.getTaskManager().create(task);
 
 		// search for John Doe using his email
-		List<Person> people = highrise.getPeopleManager().searchByCriteria(null, null, null, null, null, "john.doe.123@gmail.com");
+    final List<Person> people = highrise.getPeopleManager().searchByCriteria(null, null, null, null, null, "john.doe.123@gmail.com");
 		
-		for (Person p : people) {
+    for (final Person p : people) {
 			System.out.println(p.getFirstName());
 		}
 	}
